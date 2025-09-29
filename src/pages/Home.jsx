@@ -115,7 +115,7 @@ export default function Home() {
                      bg-gradient-to-b from-white to-gray-50"
         >
           {/* Title */}
-          <div className="flex items-center justify-center md:justify-start gap-3 reveal">
+          <div className="flex items-center justify-center md:justify-start reveal">
             <h1 className="text-5xl md:text-7xl font-serif font-bold text-black leading-tight">
               Piece Back Writer...
             </h1>
@@ -135,12 +135,12 @@ export default function Home() {
 
           {/* Buttons */}
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center reveal">
-            <button className="bg-black hover:bg-gray-800 rounded-lg px-8 py-3 text-white font-semibold transition">
+            <a href ="#Poems" className="bg-black hover:bg-gray-800 rounded-lg px-8 py-3 text-white font-semibold transition">
               Read Poems
-            </button>
-            <button className="bg-gray-200 hover:bg-gray-300 rounded-lg px-8 py-3 text-black font-semibold transition">
+            </a>
+            <a href ="#Community" className="bg-gray-200 hover:bg-gray-300 rounded-lg px-8 py-3 text-black font-semibold transition">
               Join Community
-            </button>
+            </a>
           </div>
 
           {/* Scroll Indicator */}
