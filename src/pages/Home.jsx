@@ -23,7 +23,7 @@ export default function Home() {
     reveals.forEach((el) => observer.observe(el));
   }, []);
 
-  // form states
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -43,7 +43,6 @@ export default function Home() {
     // reset form
     setForm({ name: "", email: "" });
 
-    // show thank-you + group links
     setSubmitted(true);
   };
 
@@ -67,7 +66,7 @@ export default function Home() {
       <div className="min-h-screen w-full bg-white">
         {/* Navbar */}
         <nav className="flex justify-between items-center px-8 py-4 bg-gray-50 shadow-sm sticky top-0 z-50">
-          {/* Logo / Title */}
+          
           <h1 className="text-xl font-bold font-serif">PBW</h1>
 
           {/* Desktop Menu */}
@@ -84,7 +83,7 @@ export default function Home() {
             ))}
           </ul>
 
-          {/* Mobile Hamburger Button */}
+          {/* Mobile Button */}
           <button
             className="md:hidden text-black"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -128,7 +127,7 @@ export default function Home() {
             “Where words are not just written, but lived and breathed.”
           </p>
 
-          {/* Sub-caption */}
+
           <p className="text-md md:text-lg text-gray-500 mt-3 max-w-xl reveal">
             Beyond mere words, this is a place where thought becomes rhythm,
             silence becomes song, and every stanza is a mirror held up to the soul.
@@ -235,7 +234,7 @@ export default function Home() {
             ) : (
               <div className="mt-8 text-center">
                 <h3 className="text-2xl font-semibold text-black mb-4">
-                  🎉 Thank you for joining Piece Back Writer!
+                  Thank you for joining Piece Back Writer!
                 </h3>
                 <p className="text-gray-600 mb-6">
                   You'll now receive poems and updates in your inbox.  
