@@ -5,28 +5,85 @@ export default function Poems() {
     {
       title: "The Missing Piece",
       excerpt: "Fade in, fade out...",
-      content: `Fade in, fade out, the silence calls,
-Whispers drift through empty halls.
-A piece misplaced, yet sought in vain,
-Longing’s echo, a sweet refrain.`,
+      content: `Fade in, fade out.  
+Five happy words, drowned and now lost.  
+I pick up bricks of memory,  
+trying to build a castle where the heart heals.  
+One, two…  
+Where is the missing piece?
+
+A whispered promise,  
+a climax of hope.  
+The castle walls rise, stone by stone,  
+the heart pounds as it goes, row by row.  
+Shades of effort, echoes of light,  
+but a space remains—  
+a hollow that no stone fills.
+
+I built to survive, not to feel.  
+Stacked walls high enough  
+to keep out the storm,  
+but also the sun.  
+I mistook silence for peace,  
+control for healing,  
+and still, the ache hums quietly beneath it all.
+
+What I longed for was never out there—  
+not in what I lost,  
+but in what I buried:  
+the softness, the surrender,  
+the truth I was too tired to hold.
+
+Some pieces don’t return—  
+they wait.  
+And when the heart is ready,  
+not whole, but honest,  
+they find their way back.  
+
+Not as perfection.  
+But as presence.`,
       author: "Akinremi Daniel",
     },
     {
       title: "Tears That Falls",
       excerpt: "Tears that fall like Autumn Rain...",
-      content: `Tears that fall like autumn rain,
-Washing hearts of hidden pain.
-Each drop a story, soft, untold,
-Of fleeting warmth, of hands grown cold.`,
+      content: `TEARS that fall like autumn rain,  
+DEFINING the heart’s deep pain,  
+SILENT drops that speak a thousand words,  
+ECHOES of a sorrow that deepens every words.
+
+TEARS that falls, tears that burns  
+PUSHING out the fears,  
+FLOWING out like a torrent, unimaginable things now reaveled.  
+SO clear nothing seems so dear, oh worn and weary.
+
+TEARS that falls, aches like sores,  
+DEEP, deep and deep a drop feels like more,  
+TEARS that fall, a love once lost,  
+ECHOES of a heart that paid the cost.  
+IN the shadows of memories, pain resides,  
+A broken heart where sorrow hides.`,
       author: "Akinremi Daniel",
     },
     {
       title: "Beyond Cracks",
       excerpt: "Beyond Cracks, where love resides...",
-      content: `Beyond cracks where love resides,
-Strength is born where hope collides.
-Though broken edges scar the seam,
-Within the flaws still lives a dream.`,
+      content: `BEYOND CRACKS, where love resides  
+BEAUTIFUL sparks of broken tides  
+LINES that stronger abide  
+SOUNDS of the cracks, oh love’s discharged.
+
+DISCHARGED LOVE with in a soft heart solute  
+DISSOLVED in the solvent of the broken tides of fragile pieces mending into a whole  
+IN the depth of cracks, there love unfolds.
+
+RESONANCE of sounds, vibrant movement of lines to the heart,  
+FREQUENCIES of notes, melodious in heart,  
+SIGHT of cracks, fascinating in sight,  
+DISCHARGED LOVE, comforting pains in the heart.
+
+BEYOND CRACKS, I find peace out of every lines and sounds.  
+BEYOND CRACKS, the feeling of positivity is mapped.`,
       author: "Akinremi Daniel",
     },
   ];
@@ -46,7 +103,7 @@ Within the flaws still lives a dream.`,
         Words that linger, thoughts that breathe
       </p>
 
-      {/* If a single poem is selected */}
+
       {selectedPoem ? (
         <div className="mt-10 max-w-3xl mx-auto bg-white shadow-md rounded-xl p-6 text-left">
           <h3 className="text-3xl font-bold font-serif text-black">
@@ -91,7 +148,7 @@ Within the flaws still lives a dream.`,
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* CTA */}
           {!showAll && (
             <div className="mt-12">
               <button
