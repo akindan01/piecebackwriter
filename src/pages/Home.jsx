@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Feather, Menu, X } from "lucide-react"; // added Menu and X
+import { Feather, Menu, X } from "lucide-react";
 import { FaEnvelope, FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
 import Poems from "./Poems";
 
