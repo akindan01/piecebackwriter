@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Feather, Menu, X } from "lucide-react";
+import { Feather, Menu, X } from "lucide-react"; 
 import {  FaEnvelope,  FaWhatsapp,  FaTelegramPlane,  FaPenNib, FaComments,  FaGlobe,  FaBook,  FaUsers } from "react-icons/fa";
 import Poems from "./Poems";
 
@@ -23,7 +23,7 @@ export default function Home() {
     reveals.forEach((el) => observer.observe(el));
   }, []);
 
-
+  // form 
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -32,6 +32,7 @@ export default function Home() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -40,18 +41,19 @@ export default function Home() {
     e.preventDefault();
     console.log("Community signup:", form);
 
-    // reset form
-    setForm({ name: "", email: "" });
+  
+    setForm({ name: "", email: "", title: "", content: "" });
 
+    
     setSubmitted(true);
   };
 
-  // mobile menu state
+  // mobile menu
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
-      {/* Inline animation CSS */}
+      {/* animation CSS */}
       <style>{`
         @keyframes slideUp {
           0% { transform: translateY(40px); opacity: 0; }
@@ -91,7 +93,7 @@ export default function Home() {
           </button>
         </nav>
 
-        {/* Mobile Menu Dropdown */}
+        {/* Menu Dropdown */}
         {menuOpen && (
           <div className="md:hidden bg-gray-50 shadow-sm px-6 py-4 space-y-4 text-lg font-semibold">
             {["Home", "About", "Poems", "Community"].map((item, i) => (
@@ -99,7 +101,7 @@ export default function Home() {
                 key={i}
                 href={`#${item}`}
                 className="block text-black hover:text-gray-500"
-                onClick={() => setMenuOpen(false)} // close after click
+                onClick={() => setMenuOpen(false)}
               >
                 {item}
               </a>
@@ -110,8 +112,8 @@ export default function Home() {
         {/* Hero Section */}
         <section
           id="Home"
-          className="flex flex-col items-center justify-center min-h-[calc(100vh-64px)] px-6 text-center 
-                   bg-[url('https://images.unsplash.com/photo-1575833947895-6c6223316549?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] 
+          className="relative flex flex-col items-center justify-center min-h-[calc(100vh-64px)] 
+                     px-6 text-center bg-[url('https://images.unsplash.com/photo-1575833947895-6c6223316549?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] 
                      bg-cover bg-center h-screen w-full"
         >
           <div className="absolute inset-0 bg-black/50"></div>
