@@ -198,17 +198,17 @@ export default function Home() {
 
           {/* Benefits */}
           <div className="grid gap-8 md:grid-cols-3 max-w-5xl mx-auto mb-12">
-            <div className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center">
+            <div className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center hover:shadow-xl transition">
               <FaPenNib className="text-4xl text-black" />
               <h3 className="text-xl font-semibold mt-3">Share Your Poems</h3>
               <p className="text-gray-600 mt-2">Post your works and inspire others with your words.</p>
             </div>
-            <div className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center">
+            <div className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center hover:shadow-xl transition">
               <FaComments className="text-4xl text-black" />
               <h3 className="text-xl font-semibold mt-3">Engage & Discuss</h3>
               <p className="text-gray-600 mt-2">Get feedback, exchange ideas, and grow your craft.</p>
             </div>
-            <div className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center">
+            <div className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center hover:shadow-xl transition">
               <FaGlobe className="text-4xl text-black" />
               <h3 className="text-xl font-semibold mt-3">Global Network</h3>
               <p className="text-gray-600 mt-2">Connect with writers from different cultures worldwide.</p>
