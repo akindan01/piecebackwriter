@@ -272,7 +272,7 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="https://chat.whatsapp.com/your-whatsapp-link"
+                  href="https://chat.whatsapp.com/Dr7BnwOuwOS0QJsShVlPye?mode=ems_copy_t"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition"
@@ -280,7 +280,7 @@ export default function Home() {
                   Join WhatsApp
                 </a>
                 <a
-                  href="https://t.me/your-telegram-link"
+                  href="https://t.me/+NAicwfgv2ARiYmE8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition"
