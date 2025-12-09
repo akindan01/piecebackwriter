@@ -89,7 +89,7 @@ BEYOND CRACKS, the feeling of positivity is mapped.`,
     {
     title: "The Twilight",
     excerpt: "The sun is low, a slow, deep breath of color,
-And the world finally hits the pause button...."
+And the world finally hits the pause button....",
 content: `The sun is low, a slow, deep breath of color,
 And the world finally hits the pause button.
 This isn't night yet it's the soft, fading moment
