@@ -86,6 +86,32 @@ BEYOND CRACKS, I find peace out of every lines and sounds.
 BEYOND CRACKS, the feeling of positivity is mapped.`,
       author: "Akinremi Daniel",
     },
+    {
+    title: "The Twilight",
+    excerpt: "The sun is low, a slow, deep breath of color,
+And the world finally hits the pause button...."
+content: `The sun is low, a slow, deep breath of color,
+And the world finally hits the pause button.
+This isn't night yet it's the soft, fading moment
+when you realize how fast this life is running.
+
+You remember things you planned and forgot,
+The person you haven't called in too long,
+The little fight you had this morning that now seems silly.
+The twilight is like a truth serum for the soul.
+
+In this half-light, the heavy feeling of the day
+gets weighed against the hope for tomorrow.
+
+It’s the simple, silent acknowledgment of being human
+tired, sometimes lonely, but always ready to start again.
+It makes you feel small against the wide sky,
+but also quietly strong.
+
+The twilight is life telling you to stop, look, and feel.
+It’s the gentle end of one story and the promise of the next.`,
+         author: "Akinremi Daniel",
+        },
   ];
 
   const [selectedPoem, setSelectedPoem] = useState(null);
