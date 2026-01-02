@@ -87,9 +87,9 @@ BEYOND CRACKS, the feeling of positivity is mapped.`,
       author: "Akinremi Daniel",
     },
     {
-    title: "The Twilight",
-    excerpt: "The sun is low, a slow, deep breath of color...",
-content: `The sun is low, a slow, deep breath of color,
+      title: "The Twilight",
+      excerpt: "The sun is low, a slow, deep breath of color...",
+      content: `The sun is low, a slow, deep breath of color,
 And the world finally hits the pause button.
 This isn't night yet it's the soft, fading moment
 when you realize how fast this life is running.
@@ -109,83 +109,83 @@ but also quietly strong.
 
 The twilight is life telling you to stop, look, and feel.
 It’s the gentle end of one story and the promise of the next.`,
-         author: "Akinremi Daniel",
-        },
+      author: "Akinremi Daniel",
+    },
   ];
 
   const [selectedPoem, setSelectedPoem] = useState(null);
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <section
-      id="Poems"
-      className="reveal bg-gray-50 min-h-screen w-full px-6 md:px-20 py-12 text-center"
-    >
-      <h2 className="text-5xl md:text-6xl font-serif font-bold text-black">
-        Poems
-      </h2>
-      <p className="mt-2 text-gray-600 italic text-lg">
-        Words that linger, thoughts that breathe
-      </p>
-
-
-      {selectedPoem ? (
-        <div className="mt-10 max-w-3xl mx-auto bg-white shadow-md rounded-xl p-6 text-left">
-          <h3 className="text-3xl font-bold font-serif text-black">
-            {selectedPoem.title}
-          </h3>
-          <p className="mt-4 text-gray-700 leading-relaxed whitespace-pre-line">
-            {selectedPoem.content}
+    <section id="Poems" className="bg-gray-50 min-h-screen py-24 px-6 md:px-20">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-serif text-black mb-4">
+            Selected Works
+          </h2>
+          <div className="w-24 h-1 bg-black mx-auto"></div>
+          <p className="mt-6 text-gray-500 italic text-lg max-w-xl mx-auto">
+            “Words that linger, thoughts that breathe.”
           </p>
-          <p className="mt-6 text-sm text-gray-500 italic">
-            — {selectedPoem.author}
-          </p>
-          <button
-            className="mt-6 bg-gray-200 px-6 py-2 rounded-lg hover:bg-gray-300 transition"
-            onClick={() => setSelectedPoem(null)} // go back
-          >
-            Back to Poems
-          </button>
         </div>
-      ) : (
-        <>
-          {/* Poems Grid */}
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {(showAll ? poems : poems.slice(0, 3)).map((poem, index) => (
-              <div
-                key={index}
-                className="bg-white shadow-md rounded-xl p-6 hover:shadow-xl transition"
-              >
-                <h3 className="text-2xl font-bold font-serif text-black">
-                  {poem.title}
-                </h3>
-                <p className="text-gray-600 mt-3">{poem.excerpt}</p>
-                <p className="mt-4 text-sm text-gray-500 italic">
-                  — {poem.author}
-                </p>
-                <button
-                  className="mt-6 bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition"
-                  onClick={() => setSelectedPoem(poem)} // show full poem
+
+        {selectedPoem ? (
+          <div className="animate-slideUp max-w-3xl mx-auto bg-white shadow-2xl rounded-2xl p-10 md:p-16 border border-gray-100 relative">
+            <button
+              className="absolute top-6 right-6 text-gray-400 hover:text-black transition-colors text-sm uppercase tracking-wide font-bold"
+              onClick={() => setSelectedPoem(null)}
+            >
+              Close
+            </button>
+            <h3 className="text-3xl md:text-4xl font-serif font-bold text-black mb-8 text-center">
+              {selectedPoem.title}
+            </h3>
+            <div className="w-12 h-1 bg-gray-200 mx-auto mb-8"></div>
+            <p className="text-lg md:text-xl text-gray-700 leading-loose whitespace-pre-line font-serif text-center">
+              {selectedPoem.content}
+            </p>
+            <p className="mt-12 text-sm text-gray-400 uppercase tracking-widest text-center">
+              Written by {selectedPoem.author}
+            </p>
+          </div>
+        ) : (
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {(showAll ? poems : poems.slice(0, 3)).map((poem, index) => (
+                <div
+                  key={index}
+                  className="group bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer flex flex-col justify-between"
+                  onClick={() => setSelectedPoem(poem)}
                 >
-                  Read More
+                  <div>
+                    <h3 className="text-2xl font-serif font-bold text-gray-900 group-hover:text-black transition-colors mb-4">
+                      {poem.title}
+                    </h3>
+                    <p className="text-gray-500 font-light leading-relaxed mb-6">
+                      {poem.excerpt}
+                    </p>
+                  </div>
+                  <div className="flex justify-between items-center mt-4 border-t border-gray-100 pt-4">
+                    <span className="text-xs text-gray-400 uppercase tracking-wider">{poem.author}</span>
+                    <span className="text-sm font-bold underline decoration-1 underline-offset-4 group-hover:text-gray-700">Read</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {!showAll && (
+              <div className="mt-16 text-center">
+                <button
+                  className="bg-transparent border border-black text-black px-10 py-3 rounded-full font-medium hover:bg-black hover:text-white transition-all duration-300 uppercase tracking-wide text-sm"
+                  onClick={() => setShowAll(true)}
+                >
+                  View Archive
                 </button>
               </div>
-            ))}
-          </div>
-
-          {/* CTA */}
-          {!showAll && (
-            <div className="mt-12">
-              <button
-                className="bg-gray-200 hover:bg-gray-300 text-black px-10 py-3 rounded-lg font-semibold transition"
-                onClick={() => setShowAll(true)} // show all poems
-              >
-                Explore All Poems
-              </button>
-            </div>
-          )}
-        </>
-      )}
+            )}
+          </>
+        )}
+      </div>
     </section>
   );
 }
